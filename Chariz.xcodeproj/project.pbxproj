@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450716991B31832A00FBC0B1 /* first_launch.html in Resources */ = {isa = PBXBuildFile; fileRef = 450716981B31832A00FBC0B1 /* first_launch.html */; };
+		4507169E1B3183B600FBC0B1 /* CHRHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4507169D1B3183B600FBC0B1 /* CHRHelper.m */; };
+		4527308F1B3182DE0017856C /* CHRFirstLaunchSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4527308C1B3182DE0017856C /* CHRFirstLaunchSource.m */; };
+		452730901B3182DE0017856C /* CHRFirstLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4527308E1B3182DE0017856C /* CHRFirstLaunchViewController.m */; };
 		B9CDD1561B0ACAFC0093D7A4 /* libcpm.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CDD1551B0ACAFC0093D7A4 /* libcpm.dylib */; };
 		CF3E40D11A91E10A00C11DE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3E40D01A91E10A00C11DE3 /* Images.xcassets */; };
 		CF3E40D91A92151300C11DE3 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3E40D81A92151300C11DE3 /* ScriptingBridge.framework */; };
@@ -50,6 +54,13 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
+		450716981B31832A00FBC0B1 /* first_launch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = first_launch.html; sourceTree = "<group>"; };
+		4507169C1B3183B600FBC0B1 /* CHRHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRHelper.h; sourceTree = "<group>"; };
+		4507169D1B3183B600FBC0B1 /* CHRHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRHelper.m; sourceTree = "<group>"; };
+		4527308B1B3182DE0017856C /* CHRFirstLaunchSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRFirstLaunchSource.h; sourceTree = "<group>"; };
+		4527308C1B3182DE0017856C /* CHRFirstLaunchSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRFirstLaunchSource.m; sourceTree = "<group>"; };
+		4527308D1B3182DE0017856C /* CHRFirstLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRFirstLaunchViewController.h; sourceTree = "<group>"; };
+		4527308E1B3182DE0017856C /* CHRFirstLaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRFirstLaunchViewController.m; sourceTree = "<group>"; };
 		80B03565FDF1BD7C3C7AD82E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B9CDD1551B0ACAFC0093D7A4 /* libcpm.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcpm.dylib; path = ../../../../usr/local/lib/libcpm.dylib; sourceTree = "<group>"; };
 		C4A455C5F5A95B37B57ECE19 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +129,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		450716971B31831800FBC0B1 /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				450716981B31832A00FBC0B1 /* first_launch.html */,
+			);
+			name = HTML;
+			sourceTree = "<group>";
+		};
+		4507169B1B3183A100FBC0B1 /* Helper classes */ = {
+			isa = PBXGroup;
+			children = (
+				4507169C1B3183B600FBC0B1 /* CHRHelper.h */,
+				4507169D1B3183B600FBC0B1 /* CHRHelper.m */,
+			);
+			name = "Helper classes";
+			sourceTree = "<group>";
+		};
+		4527308A1B3182CD0017856C /* First launch */ = {
+			isa = PBXGroup;
+			children = (
+				450716971B31831800FBC0B1 /* HTML */,
+				4527308B1B3182DE0017856C /* CHRFirstLaunchSource.h */,
+				4527308C1B3182DE0017856C /* CHRFirstLaunchSource.m */,
+				4527308D1B3182DE0017856C /* CHRFirstLaunchViewController.h */,
+				4527308E1B3182DE0017856C /* CHRFirstLaunchViewController.m */,
+			);
+			name = "First launch";
+			sourceTree = "<group>";
+		};
 		712386427D5634C982569D89 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +197,7 @@
 		CF678C121A84C7490084360F /* Chariz */ = {
 			isa = PBXGroup;
 			children = (
+				4507169B1B3183A100FBC0B1 /* Helper classes */,
 				CF678C441A84E2D20084360F /* Delegates */,
 				CFFE4F181A906D4A00051B92 /* Model */,
 				CF678C461A84E81F0084360F /* View Controllers */,
@@ -224,6 +265,7 @@
 		CF678C461A84E81F0084360F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4527308A1B3182CD0017856C /* First launch */,
 				CF678C451A84E2E50084360F /* Root */,
 				CF678C4A1A84E8490084360F /* Web View */,
 				CF678C5C1A85B43B0084360F /* Package List */,
@@ -419,6 +461,7 @@
 			files = (
 				CF678C521A84F0650084360F /* MainMenu.xib in Resources */,
 				CF3E40D11A91E10A00C11DE3 /* Images.xcassets in Resources */,
+				450716991B31832A00FBC0B1 /* first_launch.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,8 +524,10 @@
 				CF80DF4C1B13483D00725929 /* CHRRefreshStatusView.m in Sources */,
 				CF678C4F1A84E95F0084360F /* CHRHomeViewController.m in Sources */,
 				CF678C191A84C7490084360F /* main.m in Sources */,
+				4527308F1B3182DE0017856C /* CHRFirstLaunchSource.m in Sources */,
 				CF678C551A85AC270084360F /* CHRSourcesViewController.m in Sources */,
 				CF678C421A84E2C50084360F /* CHRRootViewController.m in Sources */,
+				4507169E1B3183B600FBC0B1 /* CHRHelper.m in Sources */,
 				CF80DF551B13663200725929 /* CHRLoadingIndicatorView.m in Sources */,
 				CF678C5F1A8661D30084360F /* CHRSourcesListViewController.m in Sources */,
 				CF678C491A84E83F0084360F /* CHRWebViewController.m in Sources */,
@@ -491,6 +536,7 @@
 				CF80DF511B135F6800725929 /* CHRSearchField.m in Sources */,
 				CF3E40E21A92235600C11DE3 /* CHREmailSendingController.m in Sources */,
 				CF678C5A1A85B4370084360F /* CHRPackageListViewController.m in Sources */,
+				452730901B3182DE0017856C /* CHRFirstLaunchViewController.m in Sources */,
 				CFC8AE121A975117001D2C91 /* CHRChangesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

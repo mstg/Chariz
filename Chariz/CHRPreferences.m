@@ -9,6 +9,7 @@
 #import "CHRPreferences.h"
 
 static NSString *const kCHRPreferencesLastLaunchKey = @"LastLaunch";
+static NSString *const kCHRPreferencesFirstLaunchKey = @"FirstLaunch";
 
 @implementation CHRPreferences
 
@@ -28,11 +29,27 @@ static NSString *const kCHRPreferencesLastLaunchKey = @"LastLaunch";
 	return [[NSUserDefaults standardUserDefaults] objectForKey:key];
 }
 
+- (BOOL)boolForKey:(NSString *)key {
+	return [[NSUserDefaults standardUserDefaults] boolForKey:key];
+}
+
 - (void)setObject:(id)object forKey:(id)key {
 	[[NSUserDefaults standardUserDefaults] setObject:object forKey:key];
 }
 
+- (void)setBool:(BOOL)object forKey:(NSString *)key {
+	[[NSUserDefaults standardUserDefaults] setBool:object forKey:key];
+}
+
 #pragma mark - Preferences
+
+- (BOOL)firstLaunch {
+	return [self boolForKey:kCHRPreferencesFirstLaunchKey];
+}
+
+- (void)setFirstLaunch:(BOOL)firstLaunch {
+	[self setBool: firstLaunch forKey:kCHRPreferencesFirstLaunchKey];
+}
 
 - (NSDate *)lastLaunch {
 	return [self objectForKey:kCHRPreferencesLastLaunchKey];

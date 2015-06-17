@@ -9,6 +9,8 @@
 #import "CHRWebViewController.h"
 #import "CHREmailSendingController.h"
 #import "CHRLoadingIndicatorView.h"
+#import "CHRHelper.h"
+
 
 static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 	"var handlers = webkit.messageHandlers;"
@@ -119,6 +121,22 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 		
 		CHREmailSendingController *emailSendingController = [[CHREmailSendingController alloc] init];
 		[emailSendingController handleEmailWithURL:navigationAction.request.URL window:self.view.window];
+	} else if ([navigationAction.request.URL.scheme isEqualToString:@"startinstall"]) {
+		decisionHandler(WKNavigationActionPolicyCancel);
+		CHRHelper *helper = [[CHRHelper alloc] init];
+		NSError *createHelper = [helper blessService];
+		if (createHelper) {
+			HBLogError(@"Failed to create Helper. Error: %@", createHelper);
+			NSAlert *alert = [[NSAlert alloc] init];
+			[alert setMessageText:[NSString stringWithFormat:@"Failed to create Helper. Error: %@", createHelper]];
+			[alert runModal];
+			exit(0);
+		} else {
+			[helper startXPCService];
+			[helper sendXPCRequest:"check_brew" completed:^(void){
+				
+			}];
+		}
 	} else {
 		decisionHandler(WKNavigationActionPolicyAllow);
 	}

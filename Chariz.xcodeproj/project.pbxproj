@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4503DB281B3188A7007B3719 /* io.chariz.CharizHelper in Copy Files */ = {isa = PBXBuildFile; fileRef = 4503DB271B3188A0007B3719 /* io.chariz.CharizHelper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4503DB2F1B318935007B3719 /* CHRHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4503DB2E1B318935007B3719 /* CHRHelper.m */; };
 		450A96BF1B2D96F200D65471 /* CHRFirstLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A96BE1B2D96F200D65471 /* CHRFirstLaunchViewController.m */; };
 		450A96C21B2DA23B00D65471 /* CHRFirstLaunchSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A96C11B2DA23B00D65471 /* CHRFirstLaunchSource.m */; };
 		450A96C51B2DAD3500D65471 /* first_launch.html in Resources */ = {isa = PBXBuildFile; fileRef = 450A96C41B2DAD3500D65471 /* first_launch.html */; };
 		450A96C71B2E4DE100D65471 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450A96C61B2E4DE100D65471 /* Security.framework */; };
 		450A96C91B2E4DE800D65471 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450A96C81B2E4DE800D65471 /* ServiceManagement.framework */; };
-		450CE7591B2F350D001EC8F6 /* CHRHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 450CE7581B2F350D001EC8F6 /* CHRHelper.m */; };
-		457C75CD1B2F90CA007C019F /* io.Chariz.CharizHelper in Copy Files */ = {isa = PBXBuildFile; fileRef = 457C75CC1B2F90C0007C019F /* io.Chariz.CharizHelper */; };
 		B9CDD1561B0ACAFC0093D7A4 /* libcpm.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CDD1551B0ACAFC0093D7A4 /* libcpm.dylib */; };
 		CF3E40D11A91E10A00C11DE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3E40D01A91E10A00C11DE3 /* Images.xcassets */; };
 		CF3E40D91A92151300C11DE3 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3E40D81A92151300C11DE3 /* ScriptingBridge.framework */; };
@@ -57,19 +57,19 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
-		457C75CB1B2F90C0007C019F /* PBXContainerItemProxy */ = {
+		4503DB261B3188A0007B3719 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 457C75C71B2F90C0007C019F /* CharizHelper.xcodeproj */;
+			containerPortal = 4503DB221B3188A0007B3719 /* CharizHelper.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 4BE4905D10445E0A006BE471;
-			remoteInfo = io.Chariz.CharizHelper;
+			remoteInfo = io.chariz.CharizHelper;
 		};
-		457C75CE1B2F90CE007C019F /* PBXContainerItemProxy */ = {
+		4503DB291B3188A9007B3719 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 457C75C71B2F90C0007C019F /* CharizHelper.xcodeproj */;
+			containerPortal = 4503DB221B3188A0007B3719 /* CharizHelper.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 4BE4905C10445E0A006BE471;
-			remoteInfo = io.Chariz.CharizHelper;
+			remoteInfo = io.chariz.CharizHelper;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -80,7 +80,7 @@
 			dstPath = Contents/Library/LaunchServices;
 			dstSubfolderSpec = 1;
 			files = (
-				457C75CD1B2F90CA007C019F /* io.Chariz.CharizHelper in Copy Files */,
+				4503DB281B3188A7007B3719 /* io.chariz.CharizHelper in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +88,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4503DB221B3188A0007B3719 /* CharizHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CharizHelper.xcodeproj; path = Helper/CharizHelper.xcodeproj; sourceTree = "<group>"; };
+		4503DB2D1B318935007B3719 /* CHRHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRHelper.h; sourceTree = "<group>"; };
+		4503DB2E1B318935007B3719 /* CHRHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRHelper.m; sourceTree = "<group>"; };
 		450A96BD1B2D96F200D65471 /* CHRFirstLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRFirstLaunchViewController.h; sourceTree = "<group>"; };
 		450A96BE1B2D96F200D65471 /* CHRFirstLaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRFirstLaunchViewController.m; sourceTree = "<group>"; };
 		450A96C01B2DA23B00D65471 /* CHRFirstLaunchSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRFirstLaunchSource.h; sourceTree = "<group>"; };
@@ -95,9 +98,6 @@
 		450A96C41B2DAD3500D65471 /* first_launch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = first_launch.html; sourceTree = "<group>"; };
 		450A96C61B2E4DE100D65471 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		450A96C81B2E4DE800D65471 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
-		450CE7571B2F350D001EC8F6 /* CHRHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHRHelper.h; path = ../CharizHelper/CHRHelper.h; sourceTree = "<group>"; };
-		450CE7581B2F350D001EC8F6 /* CHRHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHRHelper.m; path = ../CharizHelper/CHRHelper.m; sourceTree = "<group>"; };
-		457C75C71B2F90C0007C019F /* CharizHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CharizHelper.xcodeproj; path = Helper/CharizHelper/CharizHelper.xcodeproj; sourceTree = "<group>"; };
 		80B03565FDF1BD7C3C7AD82E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B9CDD1551B0ACAFC0093D7A4 /* libcpm.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcpm.dylib; path = ../../../../usr/local/lib/libcpm.dylib; sourceTree = "<group>"; };
 		C4A455C5F5A95B37B57ECE19 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +168,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4503DB231B3188A0007B3719 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4503DB271B3188A0007B3719 /* io.chariz.CharizHelper */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		450A96B41B2D90DE00D65471 /* First Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,18 +199,10 @@
 		450CE7561B2F34D0001EC8F6 /* Helper Classes */ = {
 			isa = PBXGroup;
 			children = (
-				450CE7571B2F350D001EC8F6 /* CHRHelper.h */,
-				450CE7581B2F350D001EC8F6 /* CHRHelper.m */,
+				4503DB2D1B318935007B3719 /* CHRHelper.h */,
+				4503DB2E1B318935007B3719 /* CHRHelper.m */,
 			);
 			name = "Helper Classes";
-			sourceTree = "<group>";
-		};
-		457C75C81B2F90C0007C019F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				457C75CC1B2F90C0007C019F /* io.Chariz.CharizHelper */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		712386427D5634C982569D89 /* Pods */ = {
@@ -226,7 +226,7 @@
 		CF678C071A84C7490084360F = {
 			isa = PBXGroup;
 			children = (
-				457C75C71B2F90C0007C019F /* CharizHelper.xcodeproj */,
+				4503DB221B3188A0007B3719 /* CharizHelper.xcodeproj */,
 				CF678C121A84C7490084360F /* Chariz */,
 				CF678C381A84C8450084360F /* Frameworks */,
 				CF678C111A84C7490084360F /* Products */,
@@ -466,7 +466,7 @@
 				457C75A91B2F8C4C007C019F /* PBXBuildRule */,
 			);
 			dependencies = (
-				457C75CF1B2F90CE007C019F /* PBXTargetDependency */,
+				4503DB2A1B3188A9007B3719 /* PBXTargetDependency */,
 			);
 			name = Chariz;
 			productName = Chariz;
@@ -501,8 +501,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 457C75C81B2F90C0007C019F /* Products */;
-					ProjectRef = 457C75C71B2F90C0007C019F /* CharizHelper.xcodeproj */;
+					ProductGroup = 4503DB231B3188A0007B3719 /* Products */;
+					ProjectRef = 4503DB221B3188A0007B3719 /* CharizHelper.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -513,11 +513,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		457C75CC1B2F90C0007C019F /* io.Chariz.CharizHelper */ = {
+		4503DB271B3188A0007B3719 /* io.chariz.CharizHelper */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
-			path = io.Chariz.CharizHelper;
-			remoteRef = 457C75CB1B2F90C0007C019F /* PBXContainerItemProxy */;
+			path = io.chariz.CharizHelper;
+			remoteRef = 4503DB261B3188A0007B3719 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -595,7 +595,7 @@
 				CF678C551A85AC270084360F /* CHRSourcesViewController.m in Sources */,
 				CF678C421A84E2C50084360F /* CHRRootViewController.m in Sources */,
 				450A96BF1B2D96F200D65471 /* CHRFirstLaunchViewController.m in Sources */,
-				450CE7591B2F350D001EC8F6 /* CHRHelper.m in Sources */,
+				4503DB2F1B318935007B3719 /* CHRHelper.m in Sources */,
 				450A96C21B2DA23B00D65471 /* CHRFirstLaunchSource.m in Sources */,
 				CF80DF551B13663200725929 /* CHRLoadingIndicatorView.m in Sources */,
 				CF678C5F1A8661D30084360F /* CHRSourcesListViewController.m in Sources */,
@@ -612,10 +612,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		457C75CF1B2F90CE007C019F /* PBXTargetDependency */ = {
+		4503DB2A1B3188A9007B3719 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = io.Chariz.CharizHelper;
-			targetProxy = 457C75CE1B2F90CE007C019F /* PBXContainerItemProxy */;
+			name = io.chariz.CharizHelper;
+			targetProxy = 4503DB291B3188A9007B3719 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

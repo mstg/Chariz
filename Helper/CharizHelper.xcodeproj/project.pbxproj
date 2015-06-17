@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		450716AF1B3184A900FBC0B1 /* CharizHelperCommands.c in Sources */ = {isa = PBXBuildFile; fileRef = 450716AD1B3184A900FBC0B1 /* CharizHelperCommands.c */; };
+		4503DB2C1B3188EF007B3719 /* CharizHelperCommands.c in Sources */ = {isa = PBXBuildFile; fileRef = 450716AD1B3184A900FBC0B1 /* CharizHelperCommands.c */; };
 		45DF4A261B2F8AC00077DFA9 /* CharizHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = 45DF4A251B2F83C60077DFA9 /* CharizHelper.c */; };
 /* End PBXBuildFile section */
 
@@ -134,7 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				450716AF1B3184A900FBC0B1 /* CharizHelperCommands.c in Sources */,
+				4503DB2C1B3188EF007B3719 /* CharizHelperCommands.c in Sources */,
 				45DF4A261B2F8AC00077DFA9 /* CharizHelper.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

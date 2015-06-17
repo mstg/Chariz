@@ -1,0 +1,280 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		450716AF1B3184A900FBC0B1 /* CharizHelperCommands.c in Sources */ = {isa = PBXBuildFile; fileRef = 450716AD1B3184A900FBC0B1 /* CharizHelperCommands.c */; };
+		45DF4A261B2F8AC00077DFA9 /* CharizHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = 45DF4A251B2F83C60077DFA9 /* CharizHelper.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		450716AD1B3184A900FBC0B1 /* CharizHelperCommands.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CharizHelperCommands.c; sourceTree = "<group>"; };
+		450716AE1B3184A900FBC0B1 /* CharizHelperCommands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharizHelperCommands.h; sourceTree = "<group>"; };
+		45DF4A231B2F83C60077DFA9 /* CharizHelper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CharizHelper-Info.plist"; sourceTree = "<group>"; };
+		45DF4A241B2F83C60077DFA9 /* CharizHelper-Launchd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CharizHelper-Launchd.plist"; sourceTree = "<group>"; };
+		45DF4A251B2F83C60077DFA9 /* CharizHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CharizHelper.c; sourceTree = "<group>"; };
+		4BE4905D10445E0A006BE471 /* io.chariz.CharizHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = io.chariz.CharizHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4BE4905B10445E0A006BE471 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BE4905D10445E0A006BE471 /* io.chariz.CharizHelper */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CharizHelper */ = {
+			isa = PBXGroup;
+			children = (
+				45DF4A221B2F83C60077DFA9 /* CharizHelper */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CharizHelper;
+			sourceTree = "<group>";
+		};
+		450716AC1B3184A900FBC0B1 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				450716AD1B3184A900FBC0B1 /* CharizHelperCommands.c */,
+				450716AE1B3184A900FBC0B1 /* CharizHelperCommands.h */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		45DF4A221B2F83C60077DFA9 /* CharizHelper */ = {
+			isa = PBXGroup;
+			children = (
+				450716AC1B3184A900FBC0B1 /* Commands */,
+				45DF4A231B2F83C60077DFA9 /* CharizHelper-Info.plist */,
+				45DF4A241B2F83C60077DFA9 /* CharizHelper-Launchd.plist */,
+				45DF4A251B2F83C60077DFA9 /* CharizHelper.c */,
+			);
+			path = CharizHelper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4BE4905C10445E0A006BE471 /* io.chariz.CharizHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BE4906210445E31006BE471 /* Build configuration list for PBXNativeTarget "io.chariz.CharizHelper" */;
+			buildPhases = (
+				4BE4905A10445E0A006BE471 /* Sources */,
+				4BE4905B10445E0A006BE471 /* Frameworks */,
+				452730801B311CE80017856C /* Bump Build (Temporary, to reinstall helper) */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = io.chariz.CharizHelper;
+			productName = SMJobBlessHelper;
+			productReference = 4BE4905D10445E0A006BE471 /* io.chariz.CharizHelper */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CharizHelper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CharizHelper */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BE4905C10445E0A006BE471 /* io.chariz.CharizHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		452730801B311CE80017856C /* Bump Build (Temporary, to reinstall helper) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bump Build (Temporary, to reinstall helper)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BE4905A10445E0A006BE471 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				450716AF1B3184A900FBC0B1 /* CharizHelperCommands.c in Sources */,
+				45DF4A261B2F8AC00077DFA9 /* CharizHelper.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4BE4905F10445E0B006BE471 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "CharizHelper/CharizHelper-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"CharizHelper/CharizHelper-Info.plist",
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"CharizHelper/CharizHelper-Launchd.plist",
+				);
+				PRODUCT_NAME = io.chariz.CharizHelper;
+			};
+			name = Debug;
+		};
+		4BE4906010445E0B006BE471 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "CharizHelper/CharizHelper-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				INFOPLIST_PREPROCESSOR_DEFINITIONS = SMJOBBLESS_RELEASE;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"CharizHelper/CharizHelper-Info.plist",
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"CharizHelper/CharizHelper-Launchd.plist",
+				);
+				PRODUCT_NAME = io.chariz.CharizHelper;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Muharrem Gezen (UG4JVBZY39)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Muharrem Gezen (UG4JVBZY39)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4BE4906210445E31006BE471 /* Build configuration list for PBXNativeTarget "io.chariz.CharizHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BE4905F10445E0B006BE471 /* Debug */,
+				4BE4906010445E0B006BE471 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CharizHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

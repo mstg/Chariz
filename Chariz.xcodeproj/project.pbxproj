@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		450716991B31832A00FBC0B1 /* first_launch.html in Resources */ = {isa = PBXBuildFile; fileRef = 450716981B31832A00FBC0B1 /* first_launch.html */; };
-		4507169E1B3183B600FBC0B1 /* CHRHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4507169D1B3183B600FBC0B1 /* CHRHelper.m */; };
-		4527308F1B3182DE0017856C /* CHRFirstLaunchSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4527308C1B3182DE0017856C /* CHRFirstLaunchSource.m */; };
-		452730901B3182DE0017856C /* CHRFirstLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4527308E1B3182DE0017856C /* CHRFirstLaunchViewController.m */; };
+		450A96BF1B2D96F200D65471 /* CHRFirstLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A96BE1B2D96F200D65471 /* CHRFirstLaunchViewController.m */; };
+		450A96C21B2DA23B00D65471 /* CHRFirstLaunchSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A96C11B2DA23B00D65471 /* CHRFirstLaunchSource.m */; };
+		450A96C51B2DAD3500D65471 /* first_launch.html in Resources */ = {isa = PBXBuildFile; fileRef = 450A96C41B2DAD3500D65471 /* first_launch.html */; };
+		450A96C71B2E4DE100D65471 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450A96C61B2E4DE100D65471 /* Security.framework */; };
+		450A96C91B2E4DE800D65471 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450A96C81B2E4DE800D65471 /* ServiceManagement.framework */; };
+		450CE7591B2F350D001EC8F6 /* CHRHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 450CE7581B2F350D001EC8F6 /* CHRHelper.m */; };
+		457C75CD1B2F90CA007C019F /* io.Chariz.CharizHelper in Copy Files */ = {isa = PBXBuildFile; fileRef = 457C75CC1B2F90C0007C019F /* io.Chariz.CharizHelper */; };
 		B9CDD1561B0ACAFC0093D7A4 /* libcpm.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CDD1551B0ACAFC0093D7A4 /* libcpm.dylib */; };
 		CF3E40D11A91E10A00C11DE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3E40D01A91E10A00C11DE3 /* Images.xcassets */; };
 		CF3E40D91A92151300C11DE3 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3E40D81A92151300C11DE3 /* ScriptingBridge.framework */; };
@@ -40,7 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
-		CF3E40DD1A92167900C11DE3 /* PBXBuildRule */ = {
+		457C75A91B2F8C4C007C019F /* PBXBuildRule */ = {
 			isa = PBXBuildRule;
 			compilerSpec = com.apple.compilers.proxy.script;
 			filePatterns = "*.app";
@@ -49,18 +52,52 @@
 			outputFiles = (
 				"$(DERIVED_FILES_DIR)/$(INPUT_FILE_BASE).h",
 			);
-			script = "sdef \"$INPUT_FILE_PATH\" | sdp -fh -o \"$DERIVED_FILES_DIR\" --basename \"$INPUT_FILE_BASE\" --bundleid `defaults read \"$INPUT_FILE_PATH/Contents/Info\" CFBundleIdentifier`";
+			script = " sdef \"$INPUT_FILE_PATH\" | sdp -fh -o \"$DERIVED_FILES_DIR\" --basename \"$INPUT_FILE_BASE\" --bundleid `defaults read \"$INPUT_FILE_PATH/Contents/Info\" CFBundleIdentifier`";
 		};
 /* End PBXBuildRule section */
 
+/* Begin PBXContainerItemProxy section */
+		457C75CB1B2F90C0007C019F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 457C75C71B2F90C0007C019F /* CharizHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4BE4905D10445E0A006BE471;
+			remoteInfo = io.Chariz.CharizHelper;
+		};
+		457C75CE1B2F90CE007C019F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 457C75C71B2F90C0007C019F /* CharizHelper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BE4905C10445E0A006BE471;
+			remoteInfo = io.Chariz.CharizHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		450CE7681B2F407C001EC8F6 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchServices;
+			dstSubfolderSpec = 1;
+			files = (
+				457C75CD1B2F90CA007C019F /* io.Chariz.CharizHelper in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		450716981B31832A00FBC0B1 /* first_launch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = first_launch.html; sourceTree = "<group>"; };
-		4507169C1B3183B600FBC0B1 /* CHRHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRHelper.h; sourceTree = "<group>"; };
-		4507169D1B3183B600FBC0B1 /* CHRHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRHelper.m; sourceTree = "<group>"; };
-		4527308B1B3182DE0017856C /* CHRFirstLaunchSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRFirstLaunchSource.h; sourceTree = "<group>"; };
-		4527308C1B3182DE0017856C /* CHRFirstLaunchSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRFirstLaunchSource.m; sourceTree = "<group>"; };
-		4527308D1B3182DE0017856C /* CHRFirstLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRFirstLaunchViewController.h; sourceTree = "<group>"; };
-		4527308E1B3182DE0017856C /* CHRFirstLaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRFirstLaunchViewController.m; sourceTree = "<group>"; };
+		450A96BD1B2D96F200D65471 /* CHRFirstLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRFirstLaunchViewController.h; sourceTree = "<group>"; };
+		450A96BE1B2D96F200D65471 /* CHRFirstLaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRFirstLaunchViewController.m; sourceTree = "<group>"; };
+		450A96C01B2DA23B00D65471 /* CHRFirstLaunchSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRFirstLaunchSource.h; sourceTree = "<group>"; };
+		450A96C11B2DA23B00D65471 /* CHRFirstLaunchSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRFirstLaunchSource.m; sourceTree = "<group>"; };
+		450A96C41B2DAD3500D65471 /* first_launch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = first_launch.html; sourceTree = "<group>"; };
+		450A96C61B2E4DE100D65471 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		450A96C81B2E4DE800D65471 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		450CE7571B2F350D001EC8F6 /* CHRHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHRHelper.h; path = ../CharizHelper/CHRHelper.h; sourceTree = "<group>"; };
+		450CE7581B2F350D001EC8F6 /* CHRHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHRHelper.m; path = ../CharizHelper/CHRHelper.m; sourceTree = "<group>"; };
+		457C75C71B2F90C0007C019F /* CharizHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CharizHelper.xcodeproj; path = Helper/CharizHelper/CharizHelper.xcodeproj; sourceTree = "<group>"; };
 		80B03565FDF1BD7C3C7AD82E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B9CDD1551B0ACAFC0093D7A4 /* libcpm.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcpm.dylib; path = ../../../../usr/local/lib/libcpm.dylib; sourceTree = "<group>"; };
 		C4A455C5F5A95B37B57ECE19 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +152,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				450A96C91B2E4DE800D65471 /* ServiceManagement.framework in Frameworks */,
+				450A96C71B2E4DE100D65471 /* Security.framework in Frameworks */,
 				B9CDD1561B0ACAFC0093D7A4 /* libcpm.dylib in Frameworks */,
 				CF678C3D1A84D4A40084360F /* AppKit.framework in Frameworks */,
 				CF678C3B1A84D49F0084360F /* Cocoa.framework in Frameworks */,
@@ -129,33 +168,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		450716971B31831800FBC0B1 /* HTML */ = {
+		450A96B41B2D90DE00D65471 /* First Launch */ = {
 			isa = PBXGroup;
 			children = (
-				450716981B31832A00FBC0B1 /* first_launch.html */,
+				450A96C31B2DAD2200D65471 /* HTML */,
+				450A96C01B2DA23B00D65471 /* CHRFirstLaunchSource.h */,
+				450A96C11B2DA23B00D65471 /* CHRFirstLaunchSource.m */,
+				450A96BD1B2D96F200D65471 /* CHRFirstLaunchViewController.h */,
+				450A96BE1B2D96F200D65471 /* CHRFirstLaunchViewController.m */,
+			);
+			name = "First Launch";
+			sourceTree = "<group>";
+		};
+		450A96C31B2DAD2200D65471 /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				450A96C41B2DAD3500D65471 /* first_launch.html */,
 			);
 			name = HTML;
 			sourceTree = "<group>";
 		};
-		4507169B1B3183A100FBC0B1 /* Helper classes */ = {
+		450CE7561B2F34D0001EC8F6 /* Helper Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4507169C1B3183B600FBC0B1 /* CHRHelper.h */,
-				4507169D1B3183B600FBC0B1 /* CHRHelper.m */,
+				450CE7571B2F350D001EC8F6 /* CHRHelper.h */,
+				450CE7581B2F350D001EC8F6 /* CHRHelper.m */,
 			);
-			name = "Helper classes";
+			name = "Helper Classes";
 			sourceTree = "<group>";
 		};
-		4527308A1B3182CD0017856C /* First launch */ = {
+		457C75C81B2F90C0007C019F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				450716971B31831800FBC0B1 /* HTML */,
-				4527308B1B3182DE0017856C /* CHRFirstLaunchSource.h */,
-				4527308C1B3182DE0017856C /* CHRFirstLaunchSource.m */,
-				4527308D1B3182DE0017856C /* CHRFirstLaunchViewController.h */,
-				4527308E1B3182DE0017856C /* CHRFirstLaunchViewController.m */,
+				457C75CC1B2F90C0007C019F /* io.Chariz.CharizHelper */,
 			);
-			name = "First launch";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		712386427D5634C982569D89 /* Pods */ = {
@@ -179,6 +226,7 @@
 		CF678C071A84C7490084360F = {
 			isa = PBXGroup;
 			children = (
+				457C75C71B2F90C0007C019F /* CharizHelper.xcodeproj */,
 				CF678C121A84C7490084360F /* Chariz */,
 				CF678C381A84C8450084360F /* Frameworks */,
 				CF678C111A84C7490084360F /* Products */,
@@ -197,7 +245,7 @@
 		CF678C121A84C7490084360F /* Chariz */ = {
 			isa = PBXGroup;
 			children = (
-				4507169B1B3183A100FBC0B1 /* Helper classes */,
+				450CE7561B2F34D0001EC8F6 /* Helper Classes */,
 				CF678C441A84E2D20084360F /* Delegates */,
 				CFFE4F181A906D4A00051B92 /* Model */,
 				CF678C461A84E81F0084360F /* View Controllers */,
@@ -223,6 +271,8 @@
 		CF678C381A84C8450084360F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				450A96C81B2E4DE800D65471 /* ServiceManagement.framework */,
+				450A96C61B2E4DE100D65471 /* Security.framework */,
 				CF79F6141B0228C500887121 /* libcpm.dylib */,
 				CF678C3C1A84D4A40084360F /* AppKit.framework */,
 				CF678C3A1A84D49F0084360F /* Cocoa.framework */,
@@ -265,7 +315,7 @@
 		CF678C461A84E81F0084360F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4527308A1B3182CD0017856C /* First launch */,
+				450A96B41B2D90DE00D65471 /* First Launch */,
 				CF678C451A84E2E50084360F /* Root */,
 				CF678C4A1A84E8490084360F /* Web View */,
 				CF678C5C1A85B43B0084360F /* Package List */,
@@ -408,13 +458,15 @@
 				CF678C0C1A84C7490084360F /* Sources */,
 				CF678C0D1A84C7490084360F /* Frameworks */,
 				CF678C0E1A84C7490084360F /* Resources */,
+				45DF49D81B2F79B70077DFA9 /* Set Build Number */,
 				555A965E1B0767FD3BE96982 /* Copy Pods Resources */,
-				CF23D8271B1B2E8D002280F9 /* Set Build Number */,
+				450CE7681B2F407C001EC8F6 /* Copy Files */,
 			);
 			buildRules = (
-				CF3E40DD1A92167900C11DE3 /* PBXBuildRule */,
+				457C75A91B2F8C4C007C019F /* PBXBuildRule */,
 			);
 			dependencies = (
+				457C75CF1B2F90CE007C019F /* PBXTargetDependency */,
 			);
 			name = Chariz;
 			productName = Chariz;
@@ -447,12 +499,28 @@
 			mainGroup = CF678C071A84C7490084360F;
 			productRefGroup = CF678C111A84C7490084360F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 457C75C81B2F90C0007C019F /* Products */;
+					ProjectRef = 457C75C71B2F90C0007C019F /* CharizHelper.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CF678C0F1A84C7490084360F /* Chariz */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		457C75CC1B2F90C0007C019F /* io.Chariz.CharizHelper */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = io.Chariz.CharizHelper;
+			remoteRef = 457C75CB1B2F90C0007C019F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CF678C0E1A84C7490084360F /* Resources */ = {
@@ -461,7 +529,7 @@
 			files = (
 				CF678C521A84F0650084360F /* MainMenu.xib in Resources */,
 				CF3E40D11A91E10A00C11DE3 /* Images.xcassets in Resources */,
-				450716991B31832A00FBC0B1 /* first_launch.html in Resources */,
+				450A96C51B2DAD3500D65471 /* first_launch.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +551,20 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		45DF49D81B2F79B70077DFA9 /* Set Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Set Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "defaults write \"$BUILT_PRODUCTS_DIR/$INFOPLIST_PATH\" CFBundleVersion \"$(git describe --always)\"";
+		};
 		555A965E1B0767FD3BE96982 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -498,20 +580,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CF23D8271B1B2E8D002280F9 /* Set Build Number */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Set Build Number";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "defaults write \"$BUILT_PRODUCTS_DIR/$INFOPLIST_PATH\" CFBundleVersion \"$(git describe --always)\"";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -524,10 +592,11 @@
 				CF80DF4C1B13483D00725929 /* CHRRefreshStatusView.m in Sources */,
 				CF678C4F1A84E95F0084360F /* CHRHomeViewController.m in Sources */,
 				CF678C191A84C7490084360F /* main.m in Sources */,
-				4527308F1B3182DE0017856C /* CHRFirstLaunchSource.m in Sources */,
 				CF678C551A85AC270084360F /* CHRSourcesViewController.m in Sources */,
 				CF678C421A84E2C50084360F /* CHRRootViewController.m in Sources */,
-				4507169E1B3183B600FBC0B1 /* CHRHelper.m in Sources */,
+				450A96BF1B2D96F200D65471 /* CHRFirstLaunchViewController.m in Sources */,
+				450CE7591B2F350D001EC8F6 /* CHRHelper.m in Sources */,
+				450A96C21B2DA23B00D65471 /* CHRFirstLaunchSource.m in Sources */,
 				CF80DF551B13663200725929 /* CHRLoadingIndicatorView.m in Sources */,
 				CF678C5F1A8661D30084360F /* CHRSourcesListViewController.m in Sources */,
 				CF678C491A84E83F0084360F /* CHRWebViewController.m in Sources */,
@@ -536,12 +605,19 @@
 				CF80DF511B135F6800725929 /* CHRSearchField.m in Sources */,
 				CF3E40E21A92235600C11DE3 /* CHREmailSendingController.m in Sources */,
 				CF678C5A1A85B4370084360F /* CHRPackageListViewController.m in Sources */,
-				452730901B3182DE0017856C /* CHRFirstLaunchViewController.m in Sources */,
 				CFC8AE121A975117001D2C91 /* CHRChangesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		457C75CF1B2F90CE007C019F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = io.Chariz.CharizHelper;
+			targetProxy = 457C75CE1B2F90CE007C019F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CF678C2E1A84C74A0084360F /* Debug */ = {
@@ -561,7 +637,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Developer ID Application: Muharrem Gezen (UG4JVBZY39)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -602,7 +678,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Developer ID Application: Muharrem Gezen (UG4JVBZY39)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -625,6 +701,7 @@
 			baseConfigurationReference = 80B03565FDF1BD7C3C7AD82E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Muharrem Gezen (UG4JVBZY39)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -638,7 +715,18 @@
 					cpm/cpm/src,
 				);
 				INFOPLIST_FILE = Chariz/Info.plist;
+				INFOPLIST_OUTPUT_FORMAT = "same-as-input";
+				INFOPLIST_PREPROCESS = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"-DEBUG=1",
+				);
+				PLIST_FILE_OUTPUT_FORMAT = "same-as-input";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -648,6 +736,7 @@
 			baseConfigurationReference = C4A455C5F5A95B37B57ECE19 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Muharrem Gezen (UG4JVBZY39)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -661,7 +750,18 @@
 					cpm/cpm/src,
 				);
 				INFOPLIST_FILE = Chariz/Info.plist;
+				INFOPLIST_OUTPUT_FORMAT = "same-as-input";
+				INFOPLIST_PREPROCESS = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"-DEBUG=1",
+				);
+				PLIST_FILE_OUTPUT_FORMAT = "same-as-input";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

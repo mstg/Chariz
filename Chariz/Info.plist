@@ -30,5 +30,10 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SMPrivilegedExecutables</key>
+	<dict>
+		<key>io.chariz.CharizHelper</key>
+		<string>identifier io.chariz.CharizHelper and certificate leaf[subject.CN] = &quot;Developer ID Application: Muharrem Gezen (UG4JVBZY39)&quot;</string>
+	</dict>
 </dict>
 </plist>

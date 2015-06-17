@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3BB82CD20191FEE6772CC313D55E0EDB3E9D6927",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "04101981B66E318109934C9516F88D824BB96459" : 0,
+    "3BB82CD20191FEE6772CC313D55E0EDB3E9D6927" : 0,
+    "941AA9852CF21CDC59ADBFB4BDEEAF923174FB79" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CFC05AF9-0169-4FBE-AC7D-1A900ADC30B1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "04101981B66E318109934C9516F88D824BB96459" : "Charizcpm\/cpm\/external\/fmdb",
+    "3BB82CD20191FEE6772CC313D55E0EDB3E9D6927" : "Chariz",
+    "941AA9852CF21CDC59ADBFB4BDEEAF923174FB79" : "Charizcpm"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Chariz",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Chariz.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ccgus\/fmdb.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "04101981B66E318109934C9516F88D824BB96459"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:CharizTeam\/Chariz.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3BB82CD20191FEE6772CC313D55E0EDB3E9D6927"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CharizTeam\/cpm",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "941AA9852CF21CDC59ADBFB4BDEEAF923174FB79"
+    }
+  ]
+}

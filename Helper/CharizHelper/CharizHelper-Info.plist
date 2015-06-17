@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>io.chariz.CharizHelper</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>CharizHelper</string>
+	<key>CFBundleVersion</key>
+	<string>45</string>
+	<key>SMAuthorizedClients</key>
+	<array>
+		<string>identifier io.chariz.Chariz and certificate leaf[subject.CN] = "Developer ID Application: Muharrem Gezen (UG4JVBZY39)"</string>
+	</array>
+</dict>
+</plist>

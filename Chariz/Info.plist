@@ -30,5 +30,10 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SMPrivilegedExecutables</key>
+	<dict>
+		<key>io.chariz.CharizHelper</key>
+		<string>identifier io.chariz.CharizHelper and certificate leaf[subject.CN] = &quot;Developer ID Application: The trustee for the Brighton South Property Trust (N2LN9ZT493)&quot;</string>
+	</dict>
 </dict>
 </plist>

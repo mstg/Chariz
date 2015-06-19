@@ -4,3 +4,6 @@
 [submodule "cpm"]
 	path = cpm
 	url = https://github.com/CharizTeam/cpm
+[submodule "Helper"]
+	path = Helper
+	url = https://github.com/CharizTeam/Helper

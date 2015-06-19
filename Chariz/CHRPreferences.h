@@ -13,5 +13,6 @@
 + (instancetype)sharedInstance;
 
 @property (strong, nonatomic) NSDate *lastLaunch;
+@property (nonatomic) BOOL firstLaunch;
 
 @end

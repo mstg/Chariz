@@ -10,4 +10,6 @@
 
 @interface CHRRefreshStatusView : UXView
 
+@property (copy) NSString *statusText;
+
 @end

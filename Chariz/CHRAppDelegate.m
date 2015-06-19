@@ -8,6 +8,7 @@
 
 #import "CHRAppDelegate.h"
 #import "CHRRootViewController.h"
+#import "CHRFirstLaunchSource.h"
 #import "CHRPreferences.h"
 
 static NSString *const kCHRUserDefaultsRootWindowFrameKey = @"RootWindowFrame";
@@ -15,7 +16,12 @@ static NSString *const kCHRUserDefaultsRootWindowFrameKey = @"RootWindowFrame";
 @implementation CHRAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
-	_rootWindowController = [[UXWindowController alloc] initWithRootViewController:[[CHRRootViewController alloc] init]];
+	if ([CHRPreferences sharedInstance].firstLaunch == NO) {
+		_rootWindowController = [[UXWindowController alloc] initWithRootViewController:[[CHRFirstLaunchSource alloc] init]];
+	} else {
+		_rootWindowController = [[UXWindowController alloc] initWithRootViewController:[[CHRRootViewController alloc] init]];
+	}
+
 	_rootWindowController.window.minSize = CGSizeMake(1000.f, 500.f);
 	_rootWindowController.window.contentSize = CGSizeMake(1000.f, 800.f);
 	[_rootWindowController.window center];
@@ -23,8 +29,6 @@ static NSString *const kCHRUserDefaultsRootWindowFrameKey = @"RootWindowFrame";
 	[_rootWindowController showWindow:self];
 	
 	[CHRPreferences sharedInstance].lastLaunch = [NSDate date];
-	
-	[_rootWindowController.window makeKeyAndOrderFront:self];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {

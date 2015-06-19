@@ -9,6 +9,9 @@
 #import "CHRWebViewController.h"
 #import "CHREmailSendingController.h"
 #import "CHRLoadingIndicatorView.h"
+#import "CHRHelper.h"
+#import "CHRPreferences.h"
+
 
 static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 	"var handlers = webkit.messageHandlers;"
@@ -119,6 +122,77 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 		
 		CHREmailSendingController *emailSendingController = [[CHREmailSendingController alloc] init];
 		[emailSendingController handleEmailWithURL:navigationAction.request.URL window:self.view.window];
+	} else if ([navigationAction.request.URL.scheme isEqualToString:@"startinstall"]) {
+		decisionHandler(WKNavigationActionPolicyCancel);
+		CHRHelper *helper = [[CHRHelper alloc] init];
+		NSError *createHelper = [helper blessService];
+		if (createHelper) {
+			HBLogError(@"Failed to create Helper. Error: %@", createHelper);
+			NSAlert *alert = [[NSAlert alloc] init];
+			[alert setMessageText:[NSString stringWithFormat:@"Failed to create Helper. Error: %@", createHelper]];
+			[alert runModal];
+			exit(0);
+		} else {
+			[helper startXPCService];
+			[helper check_brew:^(void){
+				if ([helper brew_installed] == 0) {
+					HBLogInfo(@"Installing Homebrew");
+					[_webView evaluateJavaScript:@"window.location.href = '#Installing_Homebrew'" completionHandler:nil];
+					[helper install_brew:^{
+						if ([[helper install_status] containsString:@"error"]) {
+							HBLogError(@"[Chariz] Error: %@", [helper install_status]);
+							NSAlert *alert = [[NSAlert alloc] init];
+							[alert setMessageText:[NSString stringWithFormat:@"[Chariz] Error: %@", [helper install_status]]];
+							[alert runModal];
+							exit(0);
+						}
+					}];
+				} else {
+					[_webView evaluateJavaScript:@"window.location.href = '#Installing_dpkg'" completionHandler:nil];
+					[helper check_dpkg:^{
+						if ([helper dpkg_installed] == 0) {
+							[helper install_dpkg:^{
+								if ([helper dpkg_installed] == 0) {
+									HBLogError(@"[Chariz] Error: DPKG could not be installed");
+									NSAlert *alert = [[NSAlert alloc] init];
+									[alert setMessageText:[NSString stringWithFormat:@"[Chariz] Error: DPKG could not be installed"]];
+									[alert runModal];
+									exit(0);
+								} else {
+									[_webView evaluateJavaScript:@"window.location.href = '#Done!_Chariz_will_now_restart!'" completionHandler:nil];
+									[CHRPreferences sharedInstance].firstLaunch = YES;
+									NSTask *task = [[NSTask alloc] init];
+									NSMutableArray *args = [NSMutableArray array];
+									[args addObject:@"-c"];
+									[args addObject:[NSString stringWithFormat:@"sleep 6; open \"%@\"", [[NSBundle mainBundle] bundlePath]]];
+									[task setLaunchPath:@"/bin/sh"];
+									[task setArguments:args];
+									[task launch];
+									
+									dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+										[NSApp terminate:nil];
+									});
+								}
+							}];
+						} else {
+							[_webView evaluateJavaScript:@"window.location.href = '#Done!_Chariz_will_now_restart!'" completionHandler:nil];
+							[CHRPreferences sharedInstance].firstLaunch = YES;
+							NSTask *task = [[NSTask alloc] init];
+							NSMutableArray *args = [NSMutableArray array];
+							[args addObject:@"-c"];
+							[args addObject:[NSString stringWithFormat:@"sleep 6; open \"%@\"", [[NSBundle mainBundle] bundlePath]]];
+							[task setLaunchPath:@"/bin/sh"];
+							[task setArguments:args];
+							[task launch];
+							
+							dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+								[NSApp terminate:nil];
+							});
+						}
+					}];
+				}
+			}];
+		}
 	} else {
 		decisionHandler(WKNavigationActionPolicyAllow);
 	}

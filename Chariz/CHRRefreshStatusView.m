@@ -38,4 +38,13 @@
 	return CGSizeMake(_progressIndicator.frame.size.width + _label.frame.origin.x + _label.frame.size.width, _progressIndicator.frame.size.height);
 }
 
+- (NSString *)statusText {
+	return _label.text;
+}
+
+- (void)setStatusText:(NSString *)statusText {
+	_label.text = statusText;
+	self.needsDisplay = YES;
+}
+
 @end
